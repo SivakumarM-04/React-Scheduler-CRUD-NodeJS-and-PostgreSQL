@@ -549,7 +549,7 @@ The Express server (`server.js`) exposes the following REST routes:
     ```
 
 
-## Running the Application
+### Running the Application
 1. navigate to the backend folder:
     ```bash
     cd backend
