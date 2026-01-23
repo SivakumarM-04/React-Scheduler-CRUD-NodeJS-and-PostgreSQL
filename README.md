@@ -13,39 +13,7 @@ This repository contains a sample full-stack application demonstrating how to sy
 - npm (>= 7.0)
 - react (>= 18.0)
 - A PostgreSQL Database with Username and Password (create at https://www.postgresql.org/download/)
-- Basic familiarity with React and PostgreSQL Query
-- Make sure the ports nothing run on 8080 , 8081
 
-## Project Structure
-```
-├── README.md                           # This guide
-├── backend                             # Node.js backend
-│   ├── config    
-│   │    ├── db.config.js               # Database Configuration
-│   ├── controllers
-│   │    ├── scheduler.controller.js     
-│   ├── models
-│   │    ├── index.js     
-│   │    ├── scheduler.model.js     
-│   ├── routes
-│   │    ├── scheduler.routes.js     
-│   ├── package.json
-│   └── server.js                       # Express server
-├── public
-│    ├── index.html
-├── src
-│    ├── App.css       
-│    ├── App.js                         # Scheduler Configuration
-│    ├── App.test.js
-│    ├── index.css
-│    ├── index.js
-│    ├── logo.svg
-│    ├── reportWebVitals.js
-│    ├── setupTests.js    
-├── .env                                #Environment Variables
-│── package.json
-
-```
 ## Setup
 
 ### Cloning the repository
@@ -65,20 +33,15 @@ This repository contains a sample full-stack application demonstrating how to sy
     ```
 
 ### PostgreSql Configuration
-- Create a PostgreSQL user with a chosen username and password and create a new database name as `eventdetails`.
-- In `backend/config/db.config.js` file update the USER, PASSWORD, and DB as per the database configuration.
+- Create a PostgreSQL user with a chosen username ,password and database name.
+- In `backend/config/db.config.js` file update the USER ,  PASSWORD and DB as per the database configuration.
 
     ```ini
     USER=<your-user-name>
     PASSWORD=<password-for-specific-user>
-    ```
-
-### Available Endpoints
-The Express server (`server.js`) exposes the following REST routes:
-| Method | URL                          | Description                         |
-| ------ | ---------------------------- | ----------------------------------- |
-| POST    | `/getData`    | List events in the given time range |
-| POST   | `/crudActions`                | Create a new ,edit and delete event.                  |                    |
+    DB=<your-Database-name>
+    ```               
+  **Note:** The default PostgreSQL username is `postgres` unless you have changed it.
 
 ### Frontend Setup
 
